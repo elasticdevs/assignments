@@ -208,29 +208,29 @@ EcommerceProject/
 
 ```
 User Table:
-long id
+Long id
 String email
 String password
 String name
 Role role (enum -> ADMIN, USER)
 
 Product Table:
-long id
+Long id
 String name
-double price
+Double price
 String description
 String imageUrl
 
 Order Table:
-long orderId
-long userId
-long cartId
+Long orderId
+Long userId
+Long cartId
 double total
 
 Cart Table:
-long id
-long userId
-List<Product> products ->  {long productID, int productQuantity}
+Long id
+Long userId
+List<Product> products ->  {Long productID, Integer productQuantity}
 
 ```
 
