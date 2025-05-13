@@ -131,6 +131,7 @@ string imageUrl
 Cart Table:
 uuid id
 uuid userId
+string status (enum: active {add/delete products to active cart only}, inactive- {when the order is placed for this cart id status will be inactive}) 
 
 Cart Item Table:
 int id
@@ -143,6 +144,7 @@ uuid orderId
 uuid userId
 uuid cartId
 float64 total
+string status (enum: in_progress, completed, cancelled)
 ```
 
 #### 6. Project Structure
