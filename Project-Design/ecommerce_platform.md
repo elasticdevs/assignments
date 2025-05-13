@@ -221,16 +221,19 @@ Double price
 String description
 String imageUrl
 
+Cart Table:
+Long id
+Long userId
+List<Product> products ->  {Long productID, Integer productQuantity}
+String status (enum -> ACTIVE(when products are in a cart), INACTIVE(when cart is empty or order is placed))
+
 Order Table:
 Long orderId
 Long userId
 Long cartId
 Double total
+String status (enum -> IN-PROGRESS, DELIVERED, CANCELLED)
 
-Cart Table:
-Long id
-Long userId
-List<Product> products ->  {Long productID, Integer productQuantity}
 
 ```
 
