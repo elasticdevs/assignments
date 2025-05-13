@@ -112,7 +112,39 @@ The architecture is divided into the following layers:
 - **Place Order:**  
   Checkout -> Order Service -> Stored in PostgreSQL.  
 
-#### 5. Project Structure
+#### 5. Basic Database schema
+
+User Table:
+uuid id
+String email
+String password
+String name
+Role role (enum: admin, user)
+
+Product Table:
+uuid id
+String name
+float64 price
+String description
+String imageUrl
+
+Cart Table:
+uuid id
+uuid userId
+
+Cart Item Table:
+int id
+uuid cart_id
+uuid product_id
+int product_quantity 
+
+Order Table:
+uuid orderId
+uuid userId
+uuid cartId
+float64 total
+
+#### 6. Project Structure
 
 ```plaintext
 ecommerce-app/
@@ -155,14 +187,10 @@ ecommerce-app/
 │   └── auth.go              # JWT Auth, logging, etc.
 │
 ├── models/
-│   ├── user/
-│   │   └── user.go         
-│   ├── product/
-│   │   └── product.go             
-│   ├── cart/
-│   │   └── cart.go          
-│   └── order/
-│       └── order.go    
+│   ├── user.go         
+│   ├── product.go
+│   ├── cart.go
+│   └── order.go
 │        
 ├── routes/
 │   └── routes.go                # All routes grouping (product, user, cart, order)
