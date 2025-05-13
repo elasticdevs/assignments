@@ -225,7 +225,7 @@ Order Table:
 Long orderId
 Long userId
 Long cartId
-double total
+Double total
 
 Cart Table:
 Long id
