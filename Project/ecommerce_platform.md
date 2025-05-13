@@ -113,20 +113,20 @@ The architecture is divided into the following layers:
   Checkout -> Order Service -> Stored in PostgreSQL.  
 
 #### 5. Basic Database schema
-
+```
 User Table:
 uuid id
-String email
-String password
-String name
+string email
+string password
+string name
 Role role (enum: admin, user)
 
 Product Table:
 uuid id
-String name
+string name
 float64 price
-String description
-String imageUrl
+string description
+string imageUrl
 
 Cart Table:
 uuid id
@@ -143,11 +143,12 @@ uuid orderId
 uuid userId
 uuid cartId
 float64 total
+```
 
 #### 6. Project Structure
 
 ```plaintext
-ecommerce-app/
+ecommerce-platform/
 |            
 ├── configs/                      # App config 
 │   └── db.go                       # DB connection & migrations
