@@ -212,12 +212,12 @@ long id
 String email
 String password
 String name
-Role role
+Role role (enum -> ADMIN, USER)
 
 Product Table:
 long id
 String name
-int price
+double price
 String description
 String imageUrl
 
